@@ -1,0 +1,23 @@
+{
+  "name": "qa-browser-agent",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "install:browsers": "playwright install",
+    "check": "node --check src/agent.js && node --check src/visual-agent.js && node --check src/report.js && node --check src/lib/config.js && node --check src/lib/evidence-store.js && node --check src/lib/telemetry.js && node --check src/lib/ocr.js && node --check src/lib/visual-assertions.js && node --check src/lib/visual-actions.js && node --check src/lib/workflow-definition.js && node --check src/lib/workflow-runner.js && node --check src/lib/reporting.js && node --check src/lib/login.js",
+    "agent": "node src/agent.js",
+    "agent:headed": "node src/agent.js --headed",
+    "agent:visual": "node src/visual-agent.js",
+    "agent:visual:headed": "node src/visual-agent.js --headed",
+    "report": "node src/report.js"
+  },
+  "dependencies": {
+    "@playwright/test": "latest",
+    "dotenv": "latest",
+    "minimist": "latest",
+    "openai": "latest",
+    "playwright": "latest",
+    "sharp": "latest",
+    "tesseract.js": "^7.0.0"
+  }
+}

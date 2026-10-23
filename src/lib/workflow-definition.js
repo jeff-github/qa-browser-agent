@@ -1,0 +1,90 @@
+export const REGIONS = {
+  mainContent: { x: 220, y: 90, width: 1180, height: 850 },
+  participantTable: { x: 112, y: 335, width: 1300, height: 635 },
+  sidebar: { x: 0, y: 0, width: 220, height: 1000 },
+  actionsArea: { x: 1060, y: 390, width: 260, height: 260 },
+  searchBox: { x: 1060, y: 210, width: 320, height: 60 },
+  firstManageButton: { x: 1060, y: 390, width: 260, height: 55 },
+  firstActionsButton: { x: 1060, y: 490, width: 180, height: 45 },
+  firstReactivateButton: { x: 1060, y: 585, width: 180, height: 45 },
+};
+
+export const FALLBACKS = {
+  participantsSidebar: { x: 44, y: 145 },
+  auditLogsSidebar: { x: 44, y: 208 },
+  searchParticipants: { x: 1225, y: 236 },
+  manageQuestionnaires: { x: 1178, y: 416 },
+  reactivate: { x: 1138, y: 608 },
+  actions: { x: 1138, y: 512 },
+};
+
+export function createClinicalWorkflow({ searchValue }) {
+  return [
+    {
+      id: 'participants-sidebar',
+      type: 'ocr-click',
+      labels: ['Participants', 'Participant'],
+      fallback: FALLBACKS.participantsSidebar,
+      regionForDiff: REGIONS.mainContent,
+      expectScreenChange: false,
+      apiAssertion: true,
+    },
+    {
+      id: 'search-participants-focus',
+      type: 'ocr-click',
+      labels: ['Search participants', 'Search'],
+      fallback: FALLBACKS.searchParticipants,
+      targetRegion: REGIONS.searchBox,
+      regionForDiff: REGIONS.participantTable,
+      expectScreenChange: false,
+    },
+    {
+      id: 'search-participants-type',
+      type: 'type',
+      value: searchValue,
+      regionForDiff: REGIONS.participantTable,
+      expectScreenChange: false,
+      shouldContain: [searchValue],
+      apiAssertion: true,
+    },
+    {
+      id: 'manage-questionnaires',
+      type: 'ocr-click',
+      labels: ['Manage Questionnaires', 'Questionnaires'],
+      fallback: FALLBACKS.manageQuestionnaires,
+      targetRegion: REGIONS.firstManageButton,
+      regionForDiff: REGIONS.mainContent,
+      expectScreenChange: true,
+      apiAssertion: true,
+    },
+    {
+      id: 'reactivate-first-row',
+      type: 'ocr-click',
+      labels: ['Reactivate'],
+      fallback: FALLBACKS.reactivate,
+      targetRegion: REGIONS.firstReactivateButton,
+      regionForDiff: REGIONS.mainContent,
+      expectScreenChange: true,
+      apiAssertion: true,
+    },
+    {
+      id: 'actions-first-row',
+      type: 'ocr-click',
+      labels: ['Actions'],
+      fallback: FALLBACKS.actions,
+      targetRegion: REGIONS.firstActionsButton,
+      regionForDiff: REGIONS.actionsArea,
+      expectScreenChange: true,
+      apiAssertion: true,
+    },
+    {
+      id: 'audit-logs-sidebar',
+      type: 'ocr-click',
+      labels: ['Audit Logs', 'Audit'],
+      fallback: FALLBACKS.auditLogsSidebar,
+      regionForDiff: REGIONS.mainContent,
+      expectScreenChange: true,
+      apiAssertion: true,
+    },
+  ];
+}

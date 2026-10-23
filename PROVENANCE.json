@@ -1,0 +1,80 @@
+{
+  "edition": "Curated copy with sanitized defaults and new documentation",
+  "files": [
+    {
+      "source_name": "agent.js",
+      "destination": "src/agent.js",
+      "original_sha256": "2016e56b1965f8a82317ff173e903b60442054d52a0275a54d4a8156ffeb4866"
+    },
+    {
+      "source_name": "config.js",
+      "destination": "src/lib/config.js",
+      "original_sha256": "efb6626b459ce198e658f08e9c64a9a6c479fa88f177a0a4e5571deb09e024dd"
+    },
+    {
+      "source_name": "evidence-store.js",
+      "destination": "src/lib/evidence-store.js",
+      "original_sha256": "98d7cfe309feea439ef264f30db606aca182e2657728b23239b82bad87c46f20"
+    },
+    {
+      "source_name": "login.js",
+      "destination": "src/lib/login.js",
+      "original_sha256": "4149896e3f5d4c647dd81432687b526971f2fc5da8762b125e567c01aaeb259b"
+    },
+    {
+      "source_name": "ocr.js",
+      "destination": "src/lib/ocr.js",
+      "original_sha256": "9abfa986bcd450bfd8ff1e05f7389f8cb3e4ac08fea7c6a933979bf0a4954759"
+    },
+    {
+      "source_name": "reporting.js",
+      "destination": "src/lib/reporting.js",
+      "original_sha256": "933b02a84fc78309a983c392ca86f4e60f14a991eef60dec63d0ac14f610a101"
+    },
+    {
+      "source_name": "telemetry.js",
+      "destination": "src/lib/telemetry.js",
+      "original_sha256": "4fa3eaa95ee969b534d577fecc181f9cd231c297ea969ff0839f186141bb4191"
+    },
+    {
+      "source_name": "visual-actions.js",
+      "destination": "src/lib/visual-actions.js",
+      "original_sha256": "af56009611570f81848cc377b7d18fcf4096b2d9d49ab1a97f485ae75742ae62"
+    },
+    {
+      "source_name": "visual-assertions.js",
+      "destination": "src/lib/visual-assertions.js",
+      "original_sha256": "2d48a06ca753b9c3667c62c4939595deb1db994e4868e3a3af05155d6cb6f737"
+    },
+    {
+      "source_name": "workflow-definition.js",
+      "destination": "src/lib/workflow-definition.js",
+      "original_sha256": "852454cff2b84e518d3835520b6be9c11a36ed5c60dec7584731a735ea3955dc"
+    },
+    {
+      "source_name": "workflow-runner.js",
+      "destination": "src/lib/workflow-runner.js",
+      "original_sha256": "76f4b5886713ec652511472cd20a3cb4015f63a6be8e4a988a9ff935d61356f5"
+    },
+    {
+      "source_name": "report.js",
+      "destination": "src/report.js",
+      "original_sha256": "b92307de07d4bc182633028f9b3e5ef82581ffa065674a3ead677c328c57aa1b"
+    },
+    {
+      "source_name": "visual-agent.js",
+      "destination": "src/visual-agent.js",
+      "original_sha256": "9386845768a3d1614724a9fcb1efed32400cc82b39065ac7b645a612cf8f7427"
+    },
+    {
+      "source_name": "package.json",
+      "destination": "package.json",
+      "original_sha256": "09ca0bfa49c110159561154e0a2fc639e8cb9b8ee7148a3273c71caa142e911d"
+    },
+    {
+      "source_name": "package-lock.json",
+      "destination": "package-lock.json",
+      "original_sha256": "820215138c13b11a50e30292d4b7f809a1a2bd47a6376a60c69066a80359445d"
+    }
+  ]
+}
