@@ -28,6 +28,5 @@ continues. Configure strict API/console failure flags as appropriate.
 CI validates JavaScript syntax; browser behavior requires a configured target.
 
 ## Status
-Private portfolio preparation copy of existing project code. Original credentials,
-run data and environment defaults are excluded. No open-source license is granted;
-confirm ownership and sharing rights before making this repository public.
+Public portfolio edition of existing project code. Original credentials, captured
+run data, and environment defaults are excluded. See the limitations above.
